@@ -1,0 +1,12 @@
+package co.com.prueba.demo;
+
+global co.com.prueba.demo.ClienteDto cliente;
+dialect  "mvel"
+
+rule "Calculo1"
+    when
+        valid:Validacion(getNommbre() == "adriana" && getEdad() < 10);
+    then
+        cliente.setIdentificador("1");
+        cliente.setNombre("Alexis");
+end
